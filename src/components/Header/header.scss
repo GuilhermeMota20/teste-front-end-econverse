@@ -1,0 +1,91 @@
+.heading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    margin: 0 auto;
+    background: var(--white-100);
+    border-radius: 0 0 10px 10px;
+    border: 1px solid var(--white-500);
+
+    box-shadow: 0px 8px 16px rgba(179, 134, 0, 0.12);
+
+    &__info {
+        font-size: 12px;
+        padding: .438rem 0;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7.438rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: .563rem;
+
+                strong {
+                    color: var(--orange-500);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &__action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border: 1px solid var(--white-500);
+        padding: .813rem 3.5rem;
+
+        & > div {
+            display: flex;
+            align-items: center;
+            gap: 3.5rem;
+
+            input {
+                border-radius: 10px;
+                background: var(--white-300);
+                width: 41.063rem;
+                padding: .875rem 4rem .875rem 1.5rem;
+
+                background-image: url(../../assets/MagnifyingGlass.svg);
+                background-repeat: no-repeat;
+                background-position: 96% .5rem;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    &__navbar {
+        padding: .688rem 3.5rem;
+        font-weight: 600;
+        
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            li > a {
+                display: flex;
+                align-items: center;
+                gap: .625rem;
+
+                transition: .3s;
+
+                &.active, &:hover {
+                    color: var(--orange-500);
+                }
+            }
+        }
+    }
+}
