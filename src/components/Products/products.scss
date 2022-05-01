@@ -62,4 +62,140 @@
         padding: 2rem;
         border: 1px dashed var(--gray-100);
     }
+
+    &__mySwiper {
+        padding-bottom: 6rem;
+
+        .swiper-slide {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            & > img {
+                margin-bottom: .625rem;
+            }
+
+            & .content {
+                .description,
+                .price {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .description {
+                    margin-bottom: .25rem;
+                    gap: .875rem;
+
+                    p {
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: var(--black-500);
+                    }
+                    span {
+                        font-size: 16px;
+                        font-weight: 400;
+                        text-decoration-line: line-through;
+                    }
+                }
+                
+                .price {
+                    gap: .25rem;
+
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: var(--black-500);
+                    }
+                    strong {
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: var(--orange-500);
+
+                        &::after {
+                            content: 'Para assinantes';
+                            display: block;
+                            font-size: 12px;
+                            font-weight: 700;
+                            color: var(--black-500);
+                        }
+                    }
+                }
+            }
+
+            button {
+                width: 90%;
+                height: 3rem;
+                border-radius: 10px;
+
+                margin-top: .625rem;
+
+                color: var(--white-100);
+                background: var(--orange-500);
+                font-size: 16px;
+                font-weight: 900;
+                letter-spacing: 8%;
+
+                text-transform: uppercase;
+                transition: .3s;
+
+                &:hover {
+                    filter: brightness(.9);
+                }
+            }
+
+            & .actions {
+                position: absolute;
+                top: 0;
+
+                width: 90%;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: var(--orange-500);
+                    border-radius: 6px;
+                    padding: .625rem 1.25rem;
+
+                    background: var(--white-300);
+                }
+            }
+        }
+        .swiper-pagination {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+
+            &-bullet {
+                width: 12px;
+                height: 12px;
+                border: 1px solid var(--gray-100);
+                background: none;
+                opacity: 1;
+
+                &-active {
+                    background: var(--gray-100);
+                }
+            }
+        }
+
+        .viewAll {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+
+            a {
+                font-size: 20px;
+                font-weight: 700;
+                color: var(--orange-500);
+                text-decoration: underline;
+            }
+        }
+    }
 }

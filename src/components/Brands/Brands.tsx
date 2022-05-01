@@ -6,7 +6,6 @@ import brandKong from '../../assets/brandKong.png';
 import brandPetGames from '../../assets/brandPetGames.png';
 
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import './brands.scss';
