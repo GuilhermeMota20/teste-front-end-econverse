@@ -1,0 +1,65 @@
+.products {
+    margin: 5.5rem 3.5rem;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+
+        h2 {
+            margin: 0;
+        }
+
+        .nav {
+            width: 680px;
+            margin-right: 0;
+            margin-bottom: 1.5rem;
+            padding: 0 20px;
+
+            button {
+                width: 6.688rem;
+                height: 2.5rem;
+                border-radius: 6px;
+
+                font-size: 14px;
+                font-weight: 700;
+
+                color: var(--gray-100);
+                border: 1px solid var(--gray-100);
+                background: none;
+
+                &.active {
+                    color: var(--white-100);
+                    background: var(--orange-500);
+                    border: none;
+                }
+            }
+
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                font-size: 16px;
+                font-weight: 900;
+                color: var(--orange-500);
+                background: none;
+                padding: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .swiper-button-prev {
+                left: -9px;
+            }
+            .swiper-button-next {
+                right: -9px;
+            }
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin: 5rem 0;
+        font-size: 5rem;
+        padding: 2rem;
+        border: 1px dashed var(--gray-100);
+    }
+}

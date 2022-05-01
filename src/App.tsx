@@ -5,6 +5,7 @@ import { Header } from './components/Header/Header';
 import { Brands } from './components/Brands/Brands';
 
 import './styles/global.scss'
+import { Products } from './components/Products/Products';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Banner />
       <Categories />
+      <Products />
       <Brands />
     </main>
   );

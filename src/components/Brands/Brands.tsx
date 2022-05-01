@@ -15,7 +15,7 @@ export function Brands() {
     return(
         <section className="brands">
             <div className="brands__heading">
-                <h2>Meu cachorro...</h2>
+                <h2>Principais marcas</h2>
                 <a href='/'> Ver todos </a>
             </div>
 
