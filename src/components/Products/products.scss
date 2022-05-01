@@ -55,14 +55,6 @@
         }
     }
 
-    h1 {
-        text-align: center;
-        margin: 5rem 0;
-        font-size: 5rem;
-        padding: 2rem;
-        border: 1px dashed var(--gray-100);
-    }
-
     &__mySwiper {
         padding-bottom: 6rem;
 
@@ -73,8 +65,16 @@
             align-items: center;
             text-align: center;
 
-            & > img {
-                margin-bottom: .625rem;
+            & .img {
+                width: 180px;
+                height: 180px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                img {
+                    margin-bottom: .625rem;
+                }
             }
 
             & .content {

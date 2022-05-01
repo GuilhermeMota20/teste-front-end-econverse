@@ -1,8 +1,7 @@
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 
-import productOne from '../../assets/product1.png';
-import productTwo from '../../assets/product2.png';
 import heartIcon from '../../assets/Heart.svg';
 
 import "swiper/css";
@@ -11,8 +10,25 @@ import "swiper/css/navigation";
 
 import './products.scss';
 
+interface ProductsProps {
+    productName: string,
+    photo: string,
+    price: number
+}
+
 export function Products() {
-    return(
+    const [product, setProduct] = useState<ProductsProps[]>([]);
+
+    useEffect(() => {
+        fetch('./products.json', {
+            headers: {
+                Accept: 'application/json',
+            }
+        }).then(res => res.json())
+          .then(data => setProduct(data.products))
+    }, []);
+
+    return (
         <section className="products">
 
             <div className="products__heading">
@@ -45,111 +61,40 @@ export function Products() {
                 modules={[Pagination, Navigation]}
                 className="products__mySwiper"
             >
-                <SwiperSlide>
-                    <img src={productOne} />
 
-                    <div className="content">
-                        <div className="description">
-                            <p>Lorem ipsum dolor amet</p>
-                            <span>Lorem ipsum</span>
+                {product.map((data, index) => (
+                    <SwiperSlide key={ index }>
+                        <div className="img">
+                            <img src={data.photo} alt="Banco de imagens não existe!" />
                         </div>
 
-                        <div className="price">
-                            <h3>Por R$ 00,00</h3>
-                            <strong>R$ 00,00</strong>
+                        <div className="content">
+                            <div className="description">
+                                <p>R$ {data.productName}</p>
+                                <span>De R$ 96,69</span>
+                            </div>
+
+                            <div className="price">
+                                <h3>Por {data.price}</h3>
+                                <strong>{(data.price - 200)}</strong>
+                            </div>
                         </div>
 
-                    </div>
+                        <button>Adicionar</button>
 
-                    <button>Adicionar</button>
-
-                    <div className="actions">
-                        <span>40% OFF</span>
-                        <img src={heartIcon} alt="Favoritar produto" />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={productOne} />
-
-                    <div className="content">
-                        <div className="description">
-                            <p>Lorem ipsum dolor amet</p>
-                            <span>Lorem ipsum</span>
+                        <div className="actions">
+                            <span>40% OFF</span>
+                            <a href="/">
+                                <img src={heartIcon} alt="Favoritar produto" />
+                            </a>
                         </div>
-
-                        <div className="price">
-                            <h3>Por R$ 00,00</h3>
-                            <strong>R$ 00,00</strong>
-                        </div>
-
-                    </div>
-
-                    <button>Adicionar</button>
-
-                    <div className="actions">
-                        <span>40% OFF</span>
-                        <a href="/">
-                            <img src={heartIcon} alt="Favoritar produto" />
-                        </a>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={productOne} />
-
-                    <div className="content">
-                        <div className="description">
-                            <p>Lorem ipsum dolor amet</p>
-                            <span>Lorem ipsum</span>
-                        </div>
-
-                        <div className="price">
-                            <h3>Por R$ 00,00</h3>
-                            <strong>R$ 00,00</strong>
-                        </div>
-
-                    </div>
-
-                    <button>Adicionar</button>
-
-                    <div className="actions">
-                        <span>40% OFF</span>
-                        <img src={heartIcon} alt="Favoritar produto" />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={productOne} />
-
-                    <div className="content">
-                        <div className="description">
-                            <p>Lorem ipsum dolor amet</p>
-                            <span>Lorem ipsum</span>
-                        </div>
-
-                        <div className="price">
-                            <h3>Por R$ 00,00</h3>
-                            <strong>R$ 00,00</strong>
-                        </div>
-
-                    </div>
-
-                    <button>Adicionar</button>
-
-                    <div className="actions">
-                        <span>40% OFF</span>
-                        <img src={heartIcon} alt="Favoritar produto" />
-                    </div>
-                </SwiperSlide>
+                    </SwiperSlide>
+                ))}
 
                 <div className="viewAll">
                     <a href="/">Ver todos</a>
                 </div>
-
             </Swiper>
-
-            {/* <h1>Em breve!</h1> */}
-
-
-
         </section>
     )
 }
