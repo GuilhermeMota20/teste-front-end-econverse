@@ -69,12 +69,29 @@ button {
 }
 
 button {
+    height: 3rem;
+    border-radius: 10px;
+    border: 1px solid #F0D075;
+
+    color: var(--white-100);
+    background: var(--orange-500);
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 8%;
+
+    text-transform: uppercase;
+    transition: .3s;
     cursor: pointer;
+
+    &:hover {
+        filter: brightness(.9);
+    }
 }
 
 .category,
 .brands,
-.products {
+.products,
+.signature {
     .swiper-button-next::after,
     .swiper-button-prev::after {
         font-size: 16px;

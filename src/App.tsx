@@ -3,9 +3,10 @@ import { Banner } from './components/Banner/Bnner';
 import { Categories } from './components/Categories/Categories';
 import { Header } from './components/Header/Header';
 import { Brands } from './components/Brands/Brands';
+import { Products } from './components/Products/Products';
+import { Signature } from './components/Signature/Signature';
 
 import './styles/global.scss'
-import { Products } from './components/Products/Products';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Categories />
       <Products />
       <Brands />
+      <Signature />
     </main>
   );
 }

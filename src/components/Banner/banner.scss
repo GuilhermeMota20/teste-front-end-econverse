@@ -34,21 +34,6 @@
 
                 button {
                     width: 8.188rem;
-                    height: 3rem;
-                    border-radius: 10px;
-
-                    color: var(--white-100);
-                    background: var(--orange-500);
-                    border: 1px solid #F0D075;
-                    font-size: 16px;
-                    font-weight: 900;
-
-                    text-transform: uppercase;
-                    transition: .3s;
-
-                    &:hover {
-                        filter: brightness(.9);
-                    }
                 }
             }
 

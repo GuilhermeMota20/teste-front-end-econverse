@@ -126,23 +126,7 @@
 
             button {
                 width: 90%;
-                height: 3rem;
-                border-radius: 10px;
-
                 margin-top: .625rem;
-
-                color: var(--white-100);
-                background: var(--orange-500);
-                font-size: 16px;
-                font-weight: 900;
-                letter-spacing: 8%;
-
-                text-transform: uppercase;
-                transition: .3s;
-
-                &:hover {
-                    filter: brightness(.9);
-                }
             }
 
             & .actions {
@@ -183,7 +167,10 @@
                 }
             }
         }
-
+        .swiper-button-prev,
+        .swiper-button-next {
+            margin-top: -5%;
+        }
         .viewAll {
             position: absolute;
             width: 100%;
