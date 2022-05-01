@@ -6,7 +6,6 @@
 
     .mySwiper {
         width: 100%;
-        padding-bottom: 2.5rem;
 
         .swiper-slide {
             position: relative;
@@ -51,10 +50,10 @@
 
     &__forMore {
         position: relative;
-        height: 441px;
+        height: 100%;
 
         div {
-            height: 441px;
+            height: 100%;
             background: var(--white-300);
             border-radius: 20px 0 0 20px;
             padding: 2.5rem;
