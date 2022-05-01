@@ -47,24 +47,6 @@
                 }
             }
         }
-
-        .swiper-pagination {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-
-            &-bullet {
-                width: 12px;
-                height: 12px;
-                border: 1px solid var(--gray-100);
-                background: none;
-                opacity: 1;
-
-                &-active {
-                    background: var(--gray-100);
-                }
-            }
-        }
     }
 
     &__forMore {
