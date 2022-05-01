@@ -70,13 +70,24 @@ export function Products() {
 
                         <div className="content">
                             <div className="description">
-                                <p>R$ {data.productName}</p>
+                                <p>{data.productName}</p>
                                 <span>De R$ 96,69</span>
                             </div>
 
                             <div className="price">
-                                <h3>Por {data.price}</h3>
-                                <strong>{(data.price - 200)}</strong>
+                                <h3>
+                                    Por &nbsp;
+                                    {new Intl.NumberFormat('pt-BR', {
+                                        style: 'currency',
+                                        currency: 'BRL'
+                                    }).format(data.price)}
+                                </h3>
+                                <strong>
+                                    {new Intl.NumberFormat('pt-BR', {
+                                        style: 'currency',
+                                        currency: 'BRL'
+                                    }).format(data.price / 27)}
+                                </strong>
                             </div>
                         </div>
 
