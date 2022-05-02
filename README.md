@@ -1,13 +1,12 @@
 # Teste Econverse: Vaga Desenvolvedor Front-End Jr
 
-### Como rodar localmente:
+## Como rodar localmente:
 
-## Instruções
 - clonar repositório;
 - rodar comando: npm i (para instalar as dependencias);
 - rodar comando: yarn start ou npm start para rodar localmente; 
 
-### Instruções do teste:
+## Instruções do teste:
 
 Segue abaixo as instruções para a execução do teste.
 
