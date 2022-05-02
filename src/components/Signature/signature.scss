@@ -80,3 +80,64 @@
         }
     }
 }
+
+
+@media (max-width: 1230px) {
+    .signature {
+        &__forMore {
+            & > div {
+                p {
+                    width: 13rem;
+                }
+            }
+
+            img {
+                right: -7rem;
+            }
+        }
+    }
+}
+@media (max-width: 910px) {
+    .signature {
+        grid-template-columns: 1fr;
+
+        .mySwiper {
+            display: none !important;
+        }
+
+        &__forMore {
+            & > div {
+                padding-left: 5rem;
+            }
+
+            img {
+                right: 0;
+            }
+        }
+    }
+}
+@media (max-width: 620px) {
+    .signature {
+        margin: 5.5rem 3.5rem;
+
+        &__forMore {
+            & > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 20px;
+
+                h2,
+                p {
+                    width: 90%;
+                }
+            }
+
+            img {
+                display: none;
+            }
+        }
+    }
+}

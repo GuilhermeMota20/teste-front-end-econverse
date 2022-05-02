@@ -83,3 +83,14 @@
         padding: 10px 14px;
     }
 }
+
+@media (max-width: 1230px) {
+    .banner {
+        margin-top: 110px;
+    }
+}
+@media (max-width: 730px) {
+    .banner {
+        margin-top: 40px;
+    }
+}

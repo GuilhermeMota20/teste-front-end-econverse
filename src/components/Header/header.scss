@@ -90,3 +90,63 @@
         }
     }
 }
+
+@media (max-width: 1230px) {
+    .heading {
+        &__info {
+            display: none;
+        }
+        &__action {
+            padding: .813rem 2rem;
+
+            & > div {
+                input {
+                    width: auto;
+                }
+            }
+
+            ul {
+                gap: .6rem;
+            }
+        }
+    }
+}
+@media (max-width: 820px) {
+    .heading {
+        
+        &__action {
+            ul {
+                display: none;
+            }
+
+            & > div {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+        }
+    }
+}
+@media (max-width: 730px) {
+    .heading {
+        &__action {
+            border: none;
+        }
+        &__navbar {
+            display: none;
+        }
+    }
+}
+@media (max-width: 620px) {
+    .heading {
+        &__action {
+            & > div {
+                justify-content: center;
+                
+                input {
+                    display: none;
+                }
+            }
+        }
+    }
+}
